@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Product Page</title>
+
+
+<!-- CSS FILES -->        
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+     
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+
+	<link th:href="@{/css/bootstrap-icons.css}" rel="stylesheet" />
+	
+	<link th:href="@{/css/product.css}" rel="stylesheet" />
+	
+</head>
+<body id="top">
+	<main>
+		<nav class="navbar navbar-expand-lg">
+					<div class="container">
+		                <a class = "navbar-brand" th:href="@{/}">
+		                    <img th:src="@{/images/safepolicylogo.webp}"   alt="" height="80px" width="80px" style="border-radius: 20px;">
+		                </a>
+						<div class="d-lg-none ms-auto me-4">
+						      <a th:href="@{#top}" class="navbar-icon bi-person smoothscroll"></a>
+						</div>
+				
+		               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		                   <span class="navbar-toggler-icon"></span>
+		               </button>
+					   
+					</div>
+		</nav>
+		
+		<section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+		    <div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-12 mx-auto">
+							<h2 class="text-center" style="background: linear-gradient( #13547a 50%, #80d0c7 80%); -webkit-background-clip: text; color: transparent;">
+								Product Discount</h2>
+		       
+				        <form th:action="@{/addProduct}"  method="post">
+				            <div class="form-group">
+				                <label for="productName">Product Name</label>
+				                <select id="productName" name="productName" required>
+				                    <option value="" disabled selected>Select Product</option>
+				                    <option value="LifeInsurance">Life Insurance</option>
+				                    <option value="Other">Other</option>
+				                </select>
+				            </div>
+				            <div class="form-group">
+				                <label for="premiumDiscount">Premium Discount (in %)</label>
+				                <input type="number" id="premiumDiscount" name="premiumDiscount" placeholder="Enter Premium Discount" required>
+				            </div>
+				            <button type="submit" class="btn">Proceed</button>
+				        </form>
+					</div>
+				</div>
+		    </div>
+		</section>
+	</main>
+	
+	<!--footer -->
+			  
+				<footer class="site-footer section-padding">
+				        <div class="container">
+				            <div class="row">
+
+				                <div class="col-lg-3 col-12 mb-4 pb-2">
+				                    <a class="navbar-brand mb-2" th:href="@{/home.html}" >
+				                        
+				                            <img th:src="@{/images/logopolicy.jpg}"  alt="" height="150px" width="150px" style="border-radius: 20px;">
+				                        
+				                    </a>
+				                </div>
+
+				                <div class="col-lg-3 col-md-4 col-6">
+				                    <h6 class="site-footer-title mb-3">Resources</h6>
+
+				                    <ul class="site-footer-links">
+				                        <li class="site-footer-link-item">
+				                            <a th:href="'#'" class="site-footer-link">Home</a>
+				                        </li>
+
+				                        <li class="site-footer-link-item">
+				                            <a th:href="'#'" class="site-footer-link">How it works</a>
+				                        </li>
+
+				                        <li class="site-footer-link-item">
+				                            <a th:href="'#'" class="site-footer-link">FAQs</a>
+				                        </li>
+
+				                        <li class="site-footer-link-item">
+				                            <a th:href="'#'" class="site-footer-link">Contact</a>
+				                        </li>
+				                    </ul>
+				                </div>
+
+				                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+				                    <h6 class="site-footer-title mb-3">Information</h6>
+
+				                    <p class="text-white d-flex mb-1">
+				                        <a th:href="@{tel: 305-240-9671}" class="site-footer-link">
+				                            305-240-9671
+				                        </a>
+				                    </p>
+
+				                    <p class="text-white d-flex">
+				                        <a th:href="@{mailto:info@company.com}"	 class="site-footer-link">
+				                            info@company.com
+				                        </a>
+				                    </p>
+				                </div>
+
+				                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+				                    <div class="dropdown">
+				                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				                        English</button>
+
+				                        <ul class="dropdown-menu">
+				                            <li><button class="dropdown-item" type="button">Thai</button></li>
+
+				                            <li><button class="dropdown-item" type="button">Myanmar</button></li>
+
+				                            <li><button class="dropdown-item" type="button">Arabic</button></li>
+				                        </ul>
+				                    </div>
+
+				                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
+				                    <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+				                    
+				                </div>
+
+				            </div>
+				        </div>
+				    </footer>
+		 	
+			<!-- JAVASCRIPT FILES -->
+					   <script src="js/jquery.min.js"></script>
+					   <script src="js/bootstrap.bundle.min.js"></script>
+					   <script src="js/jquery.sticky.js"></script>
+					   <script src="js/click-scroll.js"></script>
+					   <script src="js/custom.js"></script>
+</body>
+</html>

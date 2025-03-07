@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Home Page</title>
+
+    <!-- CSS FILES -->        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+      
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+	
+	<link th:href="@{/css/bootstrap-icons.css}" rel="stylesheet" />
+	
+	 <link th:href="@{/css/home.css}" rel="stylesheet" />
+
+	
+</head>
+
+<body id="top">
+	
+	<main>
+		<nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class = "navbar-brand" th:href="@{/home.html}">
+                    <img th:src="@{/images/safepolicylogo.webp}"   alt="" height="80px" width="80px" style="border-radius: 20px;">
+                </a>
+
+                <div class="d-lg-none ms-auto me-4">
+                     <a th:href="@{#top}" class="navbar-icon bi-person smoothscroll"></a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
+						<li class="nav-item">
+				            <a class="nav-link click-scroll" th:href="@{#section_1}">Home</a>
+				        </li>
+
+				        <li class="nav-item">
+				            <a class="nav-link" th:href="@{/policyView}">Policy Details</a>
+				        </li>
+
+				        <li class="nav-item">
+				            <a class="nav-link click-scroll" th:href="@{#section_3}">Claims</a>
+				        </li>
+
+				        <li class="nav-item">
+				            <a class="nav-link click-scroll" th:href="@{#section_4}">FAQs</a>
+				        </li>
+
+				        <li class="nav-item">
+				            <a class="nav-link click-scroll" th:href="@{#section_5}">Contact</a>
+				        </li>
+
+						<li class="nav-item dropdown">
+				            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+				            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+				                <li><a class="dropdown-item" th:href="@{/topics-listing}">Topics Listing</a></li>
+				                <li><a class="dropdown-item" th:href="@{/contact}">Contact Form</a></li>
+				            </ul>
+				        </li>
+                    </ul>
+
+					<div class="d-none d-lg-block">
+					    <a th:href="@{#top}" class="navbar-icon bi-person smoothscroll"></a>
+					</div>
+                </div>
+            </div>
+		</nav>
+		
+		<section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+           <div class="container">
+               <div class="row">
+
+                   <div class="col-lg-8 col-12 mx-auto">
+                       <h2 class="text-white text-center">Secure Today, Safe Tomorrow</h2>
+
+                       <h6 class="text-center">Let's find you the Best Insurance Policy</h6>
+
+                       <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                           <div class="input-group input-group-lg">
+                               <span class="input-group-text bi-search" id="basic-addon1">
+                                   
+                               </span>
+
+                               <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Life, Health, Term, Home, Car Insurance ..." aria-label="Search">
+
+                               <button type="submit" class="form-control">Search</button>
+                           </div>
+                       </form>
+                   </div>
+
+               </div>
+           </div>
+       </section>
+	   
+	   <section class="featured-section">
+          <div class="container">
+              <div class="row justify-content-center">
+
+                  <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                      <div class="custom-block  shadow-lg">
+                          <a th:href="@{/topics-detail}">
+                              <div class="d-flex">
+                                  <div>
+                                      <h5 class="mb-2" style="text-align: center; color: white;">Safe Policy</h5>
+
+                                      <img th:src="@{/images/ins1.jpg}" class="custom-block-image img-fluid">
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                      <div class="custom-block custom-block-overlay">
+                          <div class="d-flex flex-column h-100">
+                              <img th:src="@{/images/businesswoman-using-tablet-analysis.jpg}" class="custom-block-image img-fluid" alt="">
+
+                              <div class="custom-block-overlay-text d-flex">
+                                  <div>
+                                      <h5 class="text-white mb-2">Life Insurance</h5>
+
+                                      <p class="text-white">Your Family's Well Being Depends On You, Ensure A Good Lifestyle For Your Family By Securing Them Financially With A Term Plan...</p>
+
+                                      <a th:href="@{/personalDetail}" class="btn custom-btn mt-2 mt-lg-3">Buy Now</a>
+                                  </div>
+                              </div>
+
+                              <div class="social-share d-flex">
+                                  <p class="text-white me-4">Share:</p>
+
+                                  <ul class="social-icon">
+                                      <li class="social-icon-item">
+                                          <a  th:href="'#'" class="social-icon-link bi-twitter"></a>
+                                      </li>
+
+                                      <li class="social-icon-item">
+                                          <a  th:href="'#'" class="social-icon-link bi-facebook"></a>
+                                      </li>
+
+                                      <li class="social-icon-item">
+                                          <a  th:href="'#'" class="social-icon-link bi-pinterest"></a>
+                                      </li>
+                                  </ul>
+
+                                  <a  th:href="'#'" class="custom-icon bi-bookmark ms-auto"></a>
+                              </div>
+
+                              <div class="section-overlay"></div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </section>
+	  
+	  
+	  <section class="explore-section section-padding" id="section_2">
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-12 text-center">
+                      <h2 class="mb-4">Browse Insurances</h1>
+                  </div>
+
+              </div>
+          </div>
+
+          <div class="container-fluid">
+              <div class="row">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">Life</button>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">Health</button>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">Car</button>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane" type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">Home</button>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane" type="button" role="tab" aria-controls="education-tab-pane" aria-selected="false">Term</button>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-12">
+                      <div class="tab-content" id="myTabContent">
+                          <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                              <div class="row">
+                                  <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Pension Plan</h5>
+
+                                                      <p class="mb-0">Long-term investment plans are aimed at people who want to save for retirement, offering several tax benefits. The central government and PERDA regulate the National Pension Scheme.</p>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Child Plan</h5>
+
+                                                          <p class="mb-0">It helps you make monetary provisions for the future of your child. Child investment plans combineinvestment and insurance to ensure your kid getsfixed yearly payment or lump sum in the future</p>
+                                                  </div>                                
+                                              </div>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-lg-4 col-md-6 col-12">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Money Back Policy</h5>
+
+                                                          <p class="mb-0">The policy allows life cover with payouts at regularintervals during the policy tenure and survivalbenefits if you survive the plan's term. It's a lifeinsurance cum investment plan, especially bought for kids.</p>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
+                              <div class="row">
+                                  <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                          <div class="custom-block bg-white shadow-lg">
+                                              <a th:href="@{/topics-detail}">
+                                                  <div class="d-flex">
+                                                      <div>
+                                                          <h5 class="mb-2">Family Health insurance plans</h5>
+
+                                                          <p class="mb-0">These plans cover the immediate family members with a single sum insured under one poicy</p>
+                                                      </div>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+
+                                      <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                          <div class="custom-block bg-white shadow-lg">
+                                              <a th:href="@{/topics-detail}">
+                                                  <div class="d-flex">
+                                                      <div>
+                                                          <h5 class="mb-2">Senior Citizen Health Insurance Plans</h5>
+
+                                                          <p class="mb-0">These plans cover medical expenses of individuals who are 60 years and above in age.</p>
+                                                      </div>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+
+                                      <div class="col-lg-4 col-md-6 col-12">
+                                          <div class="custom-block bg-white shadow-lg">
+                                              <a th:href="@{/topics-detail}">
+                                                  <div class="d-flex">
+                                                      <div>
+                                                          <h5 class="mb-2">Super top-up Health Insurance plans</h5>
+
+                                                          <p class="mb-0">These plans help you enhance your existing plan’s sum insured at an affordable price.</p>
+                                                      </div>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                            </div>
+
+                          <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">   <div class="row">
+                                  <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Comprehensive Insurance</h5>
+
+                                                      <p class="mb-0">In addition to third-party liabilities, it also covers damages to your car from accidents, theft, natural disasters, etc.</p>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Stand-alone third-party insurance (SATP)</h5>
+
+                                                      <p class="mb-0">It covers third-party liabilities like injuries, losses, or damages caused by your car. This is mandatory for driving in India.</p>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0">
+                              <div class="row">
+                                  <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Structural Cover</h5>
+
+                                                      <p class="mb-0"> The policy will usually cover the costs you might have to incur to reconstruct or repair the damaged part. Such policies are frequently acquired with add-ons that give coverage to supporting structures like post-boxes, backyards, distant garages, etc.
+                                                      </p>
+                                                  </div>
+
+                                                  
+                                              </div>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Home Content Cover</h5>
+                                                      <p class="mb-0">This generally includes your furniture, movable & immovable electronic items, and valuables like jewellery. The caveat here is that you should be the owner of the asset insured, and it should be a result of a deliberate attempt to damage it at your hands.
+                                                      </p>
+                                                  </div>
+
+                                              </div>
+
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-lg-4 col-md-6 col-12">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Fire Cover</h5>
+
+                                                      <p class="mb-0">Incidents like unforeseeable natural calamities and accidents are covered under a fire insurance policy. It can be used to get coverage for your home, its contents, or both. You can also get fire insurance for your goods stored in distant warehouses with fire insurance policies.
+                                                      </p>
+                                                  </div>
+                                              </div>
+
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
+                              <div class="row">
+                                  <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Term Plan</h5>
+
+                                                      <p class="mb-0">This is a life insurance policy that provides financial support to your loved ones in case of your death during the policy period. You pay a premium, and if something happens to you, your family gets the sum assured.</p>
+                                                  </div>
+
+                                              </div>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-lg-6 col-md-6 col-12">
+                                      <div class="custom-block bg-white shadow-lg">
+                                          <a th:href="@{/topics-detail}">
+                                              <div class="d-flex">
+                                                  <div>
+                                                      <h5 class="mb-2">Saral Jeevan Bima</h5>
+
+                                                      <p class="mb-0">This is a simple individual term life insurance policy that gives your family financial protection in case you die early. It offers flexible premium payment options, attractive discounts, and a high sum assured.</p>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+					  
+              </div>
+          </div>
+      </section>
+	  
+	  <section class="timeline-section section-padding" id="section_3">
+	         <div class="section-overlay"></div>
+	
+	         <div class="container">
+	             <div class="row">
+	
+	                 <div class="col-12 text-center">
+	                     <h2 class="text-white mb-4">How to File a Claim?</h1>
+	                 </div>
+	
+	                 <div class="col-lg-10 col-12 mx-auto">
+	                     <div class="timeline-container">
+	                         <ul class="vertical-scrollable-timeline" id="vertical-scrollable-timeline">
+	                             <div class="list-progress">
+	                                 <div class="inner"></div>
+	                             </div>
+	
+	                             <li>
+	                                 <h4 class="text-white mb-3">Contact Us & Report the Incident</h4>
+	
+	                                 <p class="text-white">As soon as an incident occurs, contact our claims department should Have your policy number ready to help us quickly locate your account and policy details.Collect all evidence related to the loss or damage. Accurate and comprehensive documentation will help expedite your claim.</p>
+	
+	                                 <div class="icon-holder">
+	                                   <i class="bi-search"></i>
+	                                 </div>
+	                             </li>
+	                             
+	                             <li>
+	                                 <h4 class="text-white mb-3">Submit Your Claim</h4>
+	
+	                                 <p class="text-white">Use our secure online portal to submit your claim and upload supporting documents.Alternatively, you can email or mail your claim form and documents to the addresses provided below.</p>
+	
+	                                 <div class="icon-holder">
+	                                   <i class="bi-bookmark"></i>
+	                                 </div>
+	                             </li>
+	
+	                             <li>
+	                                 <h4 class="text-white mb-3"> Claim Review</h4>
+	
+	                                 <p class="text-white">Our claims team will review your submission and may contact you for additional information or clarification.In some cases, an adjuster may be assigned to inspect the damage or gather more details.</p>
+	
+	                                 <div class="icon-holder">
+	                                   <i class="bi-book"></i>
+	                                 </div>
+	                             </li>
+	                             <li>
+	                                 <h4 class="text-white mb-3">Resolution</h4>
+	
+	                                 <p class="text-white">Once your claim is approved, we will provide you with a detailed explanation of the coverage and any applicable compensation.Payment will be issued as per your policy terms, either via direct deposit or check.</p>
+	
+	                                 <div class="icon-holder">
+	                                   <i class="bi-book"></i>
+	                                 </div>
+	                             </li>
+	                         </ul>
+	                     </div>
+	                 </div>
+	
+	                 <div class="col-12 text-center mt-5">
+	                     <p class="text-white">
+	                         Want to learn more?
+	                         <a th:href="'#'" class="btn custom-btn custom-border-btn ms-3">Check out Youtube</a>
+	                     </p>
+	                 </div>
+	             </div>
+	         </div>
+	     </section>
+		 
+		 <section class="faq-section section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mb-4">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-lg-5 col-12">
+                        <img th:src="@{images/faq_graphic.jpg}" class="img-fluid" alt="FAQs">
+                    </div>
+
+                    <div class="col-lg-6 col-12 m-auto">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        How are insurance premiums determined?
+                                    </button>
+                                </h2>
+
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Premiums are calculated based on factors such as the type of coverage, the amount of coverage, the policyholder's age, health, and lifestyle, and the risk level associated with insuring the individual or asset.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        What is a deductible in an insurance policy?
+                                </button>
+                                </h2>
+
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        A deductible is the amount the policyholder must pay out of pocket before the insurance company starts covering the expenses. Higher deductibles generally mean lower premiums and vice versa.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        How do I file a claim?
+                                </button>
+                                </h2>
+
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        To file a claim, contact your insurance company as soon as possible after the incident occurs. Provide all necessary documentation and information required to process your claim, such as accident reports, medical bills, or repair estimates.                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+		
+		<section class="contact-section section-padding section-bg" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 text-center">
+                        <h2 class="mb-5">Get in touch</h2>
+                    </div>
+
+                    <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.065641062665!2d-122.4230416990949!3d37.80335401520422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858127459fabad%3A0x808ba520e5e9edb7!2sFrancisco%20Park!5e1!3m2!1sen!2sth!4v1684340239744!5m2!1sen!2sth" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
+                        <h4 class="mb-3">Head office</h4>
+
+                        <p>Bay St &amp;, Larkin St, San Francisco, CA 94109, United States</p>
+
+                        <hr>
+
+                        <p class="d-flex align-items-center mb-1">
+                            <span class="me-2">Phone</span>
+
+                            <a th:href="@{tel: 305-240-9671}" class="site-footer-link">
+                                305-240-9671
+                            </a>
+                        </p>
+
+                        <p class="d-flex align-items-center">
+                            <span class="me-2">Email</span>
+
+                            <a th:href="@{mailto:info@company.com}" class="site-footer-link">
+                                info@company.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mx-auto">
+                        <h4 class="mb-3">Dubai office</h4>
+
+                        <p>Burj Park, Downtown Dubai, United Arab Emirates</p>
+
+                        <hr>
+
+                        <p class="d-flex align-items-center mb-1">
+                            <span class="me-2">Phone</span>
+
+                            <a th:href="@{tel: 110-220-3400}" class="site-footer-link">
+                                110-220-3400
+                            </a>
+                        </p>
+
+                        <p class="d-flex align-items-center">
+                            <span class="me-2">Email</span>
+
+                            <a th:href="@{mailto:info@company.com}" class="site-footer-link">
+                                info@company.com
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+		<span id="error-message" class="error-message">
+			 Access Denied: You do not have permission to access this page.
+		</span>
+	  
+	</main>
+	
+	<footer class="site-footer section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-12 mb-4 pb-2">
+                    <a class="navbar-brand mb-2" th:href="@{/home.html}" >
+                        
+                            <img th:src="@{/images/logopolicy.jpg}"  alt="" height="150px" width="150px" style="border-radius: 20px;">
+                        
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h6 class="site-footer-title mb-3">Resources</h6>
+
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a th:href="'#'" class="site-footer-link">Home</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a th:href="'#'" class="site-footer-link">How it works</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a th:href="'#'" class="site-footer-link">FAQs</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a th:href="'#'" class="site-footer-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                    <h6 class="site-footer-title mb-3">Information</h6>
+
+                    <p class="text-white d-flex mb-1">
+                        <a th:href="@{tel: 305-240-9671}" class="site-footer-link">
+                            305-240-9671
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <a th:href="@{mailto:info@company.com}"	 class="site-footer-link">
+                            info@company.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        English</button>
+
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">Thai</button></li>
+
+                            <li><button class="dropdown-item" type="button">Myanmar</button></li>
+
+                            <li><button class="dropdown-item" type="button">Arabic</button></li>
+                        </ul>
+                    </div>
+
+                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
+                    <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+                    
+                </div>
+
+            </div>
+        </div>
+    </footer>
+	
+	<!-- JAVASCRIPT FILES -->
+	   <script src="js/jquery.min.js"></script>
+	   <script src="js/bootstrap.bundle.min.js"></script>
+	   <script src="js/jquery.sticky.js"></script>
+	   <script src="js/click-scroll.js"></script>
+	   <script src="js/custom.js"></script>
+	   <script th:src="@{/js/home.js}"></script>
+	    
+	   
+
+</body>
+</html>
