@@ -31,7 +31,7 @@ Throughout this journey, we have an additional identifier called the Quote ID. A
 
 ![PolicyDetailImage](https://github.com/user-attachments/assets/d2f04b33-3ed9-4020-b6c1-3570d3057f76)
 
-After completing the payment, the user is redirected to the Policy Details page, where all generated policies are available. We have also implemented pagination for easy navigation. On this page, users can view policy details such as status, final premium, application number, and more.
+After completing the payment, the user is redirected to the Policy Details page, where all generated policies are available and can also be downloaded. We have also implemented pagination for easy navigation. On this page, users can view policy details such as status, final premium, application number, and more.
 
 ![PolicyDetailImage2](https://github.com/user-attachments/assets/62857462-fc3e-4639-b8aa-5ed32adccb5e)
 
@@ -43,3 +43,7 @@ Here, you can see the Product page, where you can dynamically add discounts to a
 ![ConfigPageImage](https://github.com/user-attachments/assets/00c38cc5-9872-4cc5-8974-f4ce7e181eaf)
 
 The Configuration page allows you to set the annual income, based on which the sum assured is determined dynamically. Additionally, you can configure add-on benefits dynamically as well.
+
+![PdfImage](https://github.com/user-attachments/assets/0a99d33e-4729-4e63-b914-d8c86e34cef4)
+
+Here's the PDF of the Generated Policy.
