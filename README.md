@@ -7,3 +7,6 @@ In this video, we showcase the admin journey.
 
 ![RegisterPageImage](https://github.com/user-attachments/assets/1e9c249c-e163-477e-bec1-b7951dc0f8ec)
 This is the section where new users can sign up.
+
+![PersonalDetailsImage](https://github.com/user-attachments/assets/a00b66f0-eabd-493b-98e8-23581bfb2cbd)
+On the Personal Details page, users can view all their registered information. Additionally, the annual income field can be manually configured, determining the sum assured accordingly.
