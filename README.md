@@ -9,9 +9,11 @@ Safe Policy is a policy-based project featuring a dynamic form journey for calcu
 - JPA (Java Persistence API)  
 - Thymeleaf  
 - PayPal Payment Integration  
+- Bootstrap v5.2.2  
+- HTML, CSS, JavaScript  
 - Pagination  
 - PDF Generation
-
+  
 https://github.com/user-attachments/assets/453a7b7a-d7f0-4ccd-b187-9c2d65cd8a9b
 
 In this video, we showcase the admin journey.
