@@ -36,3 +36,8 @@ After completing the payment, the user is redirected to the Policy Details page,
 ![PolicyDetailImage2](https://github.com/user-attachments/assets/62857462-fc3e-4639-b8aa-5ed32adccb5e)
 
 
+![ProductImage](https://github.com/user-attachments/assets/0470eae5-e19b-4fe2-9ed5-976322fca5e5)
+
+
+
+![ConfigPageImage](https://github.com/user-attachments/assets/00c38cc5-9872-4cc5-8974-f4ce7e181eaf)
