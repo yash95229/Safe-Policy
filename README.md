@@ -38,6 +38,8 @@ After completing the payment, the user is redirected to the Policy Details page,
 
 ![ProductImage](https://github.com/user-attachments/assets/0470eae5-e19b-4fe2-9ed5-976322fca5e5)
 
-
+Here, you can see the Product page, where you can dynamically add discounts to a specific product. These discounts will be reflected on the Income Details page.
 
 ![ConfigPageImage](https://github.com/user-attachments/assets/00c38cc5-9872-4cc5-8974-f4ce7e181eaf)
+
+The Configuration page allows you to set the annual income, based on which the sum assured is determined dynamically. Additionally, you can configure add-on benefits dynamically as well.
