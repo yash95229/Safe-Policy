@@ -1,5 +1,16 @@
 # Safe-Policy
-  Safe Policy is a policy-based project featuring a dynamic form journey for calculating policy premiums. The premium is determined based on factors such as annual income, premium paying term, policy term, and payment frequency. Currently, the project includes one product—Term Insurance, but it is designed to support the addition of multiple products in the future.
+
+Safe Policy is a policy-based project featuring a dynamic form journey for calculating policy premiums. The premium is determined based on factors such as annual income, premium paying term, policy term, and payment frequency. Currently, the project includes one product—Term Insurance, but it is designed to support the addition of multiple products in the future.
+
+### Technologies Used:
+- Java  
+- Spring Boot  
+- Spring Security  
+- JPA (Java Persistence API)  
+- Thymeleaf  
+- PayPal Payment Integration  
+- Pagination  
+- PDF Generation
 
 https://github.com/user-attachments/assets/453a7b7a-d7f0-4ccd-b187-9c2d65cd8a9b
 
@@ -9,19 +20,27 @@ In this video, we showcase the admin journey.
 
 This is the section where new users can sign up.
 
-![PersonalDetailsImage](https://github.com/user-attachments/assets/a00b66f0-eabd-493b-98e8-23581bfb2cbd)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a00b66f0-eabd-493b-98e8-23581bfb2cbd" alt="PersonalDetailsImage">
+</p>
 
 On the Personal Details page, users can view all their registered information. Additionally, the annual income field is dynamically configured, determining the sum assured accordingly.
 
-![IncomeDetailImage](https://github.com/user-attachments/assets/2a17912a-43df-42a9-8651-a697159dda91)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2a17912a-43df-42a9-8651-a697159dda91" alt="IncomeDetailImage">
+</p>
 
 The Income Details page is where the premium is calculated. The sum assured is determined based on the annual income selected on the previous page. The premium is then calculated using the premium paying term, policy term, and payment frequency. Additionally, a product discount can be dynamically applied, allowing us to determine the final total premium.
 
-![AddOnImage](https://github.com/user-attachments/assets/5b58be45-c2f7-4a5e-9854-b3c4f1f4fcf8)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5b58be45-c2f7-4a5e-9854-b3c4f1f4fcf8" alt="AddOnImage">
+</p>
 
 To enhance your term insurance, we offer add-on benefits that can be included in your premium.
 
-![PaymentImage](https://github.com/user-attachments/assets/d2e27058-44ab-497f-afef-ecad44725e89)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d2e27058-44ab-497f-afef-ecad44725e89" alt="PaymentImage">
+</p>
 
 The payment page is the final step of our form journey, where you can view the final premium amount and proceed with the payment.
 
